@@ -9,7 +9,7 @@ const Navbar = () => {
       }
     }
   return (
-    <div className="navbar bg-teal-600 text-neutral-content">
+    <div className="navbar fixed z-10 bg-teal-600 text-neutral-content">
     <div className="containerWrap  flex justify-between text-white">
   <a className="btn btn-ghost normal-case text-xl">InstantChat</a>
  {currentUser &&  <button onClick={handleLogout} className="text-white">Logout</button>}

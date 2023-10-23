@@ -23,10 +23,11 @@ const SendMessage = () => {
         uid,
         createdAt: serverTimestamp(),
       });
-       
+
     } catch (error) {
       console.log(error);
     }
+    console.log(value)
     setValue("");
   };
 

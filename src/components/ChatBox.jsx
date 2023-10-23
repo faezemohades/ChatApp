@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Message from "./Message";
-import { collection, query, where, onSnapshot, limit,orderBy } from "firebase/firestore";
+import { collection, query, onSnapshot, limit,orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 
 const ChatBox = () => {
@@ -16,7 +16,7 @@ const ChatBox = () => {
       querySnapshot.forEach((doc) => {
         messages.push({...doc.data(),id:doc.id});
       });
-      
+      console.log(messages)
       setmessages(messages);
     });
     return ()=> unsubscribe;
